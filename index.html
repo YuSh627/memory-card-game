@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/memory-game.png" />
+
+    <title>Memory Card Game</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <h1>Memory Card</h1>
+    <div id="timer"></div>
+    <section id="card-section"></section>
+
+    <div class="game-buttons">
+      <i class="fa fa-toggle-on" id="toggle-btn"></i>
+      <i class="fa fa-rotate-right" id="resetBtn" aria-hidden="true"></i>
+    </div>
+
+    <!-- Popup overlay and message box -->
+    <div id="popup-overlay">
+      <div id="popup-message">
+        <!-- <i class="fa-solid fa-xmark" id="close-button"></i> -->
+        <p id="message-text"></p>
+        <div class="buttons">
+          <button id="new-game">New Game</button>
+          <button id="close-button">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <i class="fa-regular fa-copyright" id="modal-toggle"></i>
+    <div id="modal-container" class="modal-container">
+      <div class="modal" id="staticBackdrop">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="modal-close" id="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <span style="display: block; margin: 10px 0 0 0"
+                ><b> <span style="color: #4e4e4e">Disclaimer:</span></b></span
+              >
+              By using Memory Card Game, players agree to indemnify and hold
+              harmless Sciever Inc. from any liabilities, damages, or losses
+              incurred while using the game.
+              <br />
+              <span style="display: block; margin: 10px 0 0 0; color: #4e4e4e"
+                ><b>Credits:</b></span
+              >
+              Designed & Powered By
+              <a
+                href="https://www.scieverinc.com/"
+                style="text-decoration: none"
+                target="_blank"
+                ><b><span style="color: #4e4e4e">Sciever Inc.</span></b></a
+              ><br />
+              Developed By
+              <a
+                href="https://www.linkedin.com/in/ayushshrestha627890"
+                style="text-decoration: none"
+                target="_blank"
+                ><span style="color: #4e4e4e; font-weight: 500"
+                  >Ayush Shrestha</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
